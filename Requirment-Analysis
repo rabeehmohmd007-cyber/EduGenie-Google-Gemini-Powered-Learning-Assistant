@@ -1,2 +1,340 @@
-Requirment-Analysis
-Requirement Analysis Phase Functional Requirements: Student can type a topic or question App can explain the topic simply App can summarize the topic App can generate a multiple-choice quiz on the topic App displays results clearly on screen Non-Functional Requirements: Fast response time Simple, easy-to-use interface Works on both mobile and desktop browsers Tools & Technologies Required: Google Gemini API Google AI Studio (for development) GitHub (for version control and submission)
+EduGenie: Google Gemini-Powered Learning Assistant
+Requirement Analysis
+1. Project Overview
+EduGenie is an AI-powered learning assistant designed to help students learn, revise, and assess their knowledge through an interactive conversational interface. The system uses Google Gemini to provide personalized explanations, generate quizzes, summarize learning materials, create flashcards, and support exam preparation.
+The main objective is to create a virtual learning companion that can adapt educational content to a student's needs and make self-learning more effective.
+________________________________________
+2. Problem Statement
+Students commonly face difficulties such as:
+•	Understanding complex academic concepts.
+•	Getting immediate clarification when teachers are unavailable.
+•	Preparing effective notes from large amounts of study material.
+•	Creating practice questions and quizzes.
+•	Identifying weak areas before examinations.
+•	Following a consistent study schedule.
+•	Finding personalized learning resources.
+Traditional learning systems generally provide the same content to every student. EduGenie aims to provide a more interactive and personalized learning experience using Gemini.
+________________________________________
+3. Objectives
+The major objectives of EduGenie are:
+1.	To provide an AI-based virtual tutor for students.
+2.	To explain difficult concepts in simple and understandable language.
+3.	To generate summaries from notes and study materials.
+4.	To automatically generate quizzes and practice questions.
+5.	To create personalized flashcards for revision.
+6.	To analyze quiz performance and identify weak topics.
+7.	To provide personalized study recommendations.
+8.	To support students in exam preparation.
+9.	To provide an interactive conversational learning environment.
+10.	To use Google Gemini's generative AI capabilities for educational assistance.
+________________________________________
+4. Functional Requirements
+Functional requirements describe what the EduGenie system should do.
+FR1 — User Registration and Login
+The system should allow users to:
+•	Create an account.
+•	Log in securely.
+•	Log out.
+•	Manage basic profile information.
+FR2 — AI Tutor Chat
+The system should provide a conversational AI interface where students can:
+•	Ask academic questions.
+•	Receive explanations from Gemini.
+•	Ask follow-up questions.
+•	Request simpler or more detailed explanations.
+•	Ask for examples and analogies.
+Example:
+Student: "Explain Newton's second law simply."
+EduGenie should provide an understandable explanation and, if requested, examples or practice questions.
+________________________________________
+FR3 — Personalized Explanation
+Students should be able to select their preferred learning level:
+•	Beginner
+•	Intermediate
+•	Advanced
+•	Exam-oriented
+Gemini should generate explanations appropriate to the selected level.
+________________________________________
+FR4 — Study Material Upload
+Students should be able to upload learning materials such as:
+•	PDF documents
+•	Text notes
+•	Lecture materials
+•	Images containing study content
+The system should process the uploaded material and allow students to interact with it.
+________________________________________
+FR5 — AI Summarization
+EduGenie should generate:
+•	Short summaries
+•	Detailed summaries
+•	Important points
+•	Definitions
+•	Key concepts
+•	Formula lists where applicable
+This allows students to quickly revise lengthy material.
+________________________________________
+FR6 — Ask Your Notes
+Students should be able to ask questions about uploaded material.
+For example:
+"What are the three causes mentioned in this chapter?"
+The system should answer based on the relevant uploaded learning content.
+________________________________________
+FR7 — Quiz Generation
+The system should automatically generate quizzes based on:
+•	Subject
+•	Topic
+•	Difficulty level
+•	Uploaded material
+Supported question types may include:
+•	Multiple-choice questions
+•	True/false
+•	Fill in the blanks
+•	Short-answer questions
+________________________________________
+FR8 — Quiz Evaluation
+After completing a quiz, EduGenie should:
+•	Calculate the score.
+•	Display correct and incorrect answers.
+•	Explain incorrect answers.
+•	Track the student's performance.
+•	Identify topics requiring additional revision.
+________________________________________
+FR9 — Flashcard Generation
+The system should automatically generate flashcards from:
+•	Uploaded notes
+•	Selected topics
+•	AI-generated summaries
+Example:
+Front: What is photosynthesis?
+Back: The process by which green plants convert light energy into chemical energy.
+________________________________________
+FR10 — Progress Tracking
+The system should maintain student learning information such as:
+•	Quizzes attempted
+•	Scores
+•	Topics studied
+•	Weak topics
+•	Completed study sessions
+•	Learning progress
+A dashboard should display this information in an easy-to-understand format.
+________________________________________
+FR11 — Personalized Recommendations
+Based on student performance, EduGenie should recommend:
+•	Topics to revise.
+•	Additional questions.
+•	Flashcards.
+•	Relevant study sessions.
+•	Practice quizzes.
+For example:
+"You scored 45% in Algebra. Would you like a short revision session on quadratic equations?"
+________________________________________
+FR12 — Study Planner
+The system should allow students to enter:
+•	Subjects
+•	Topics
+•	Examination dates
+•	Available study hours
+EduGenie can then generate a suggested study schedule.
+________________________________________
+FR13 — Exam Preparation
+The system should provide an exam preparation mode that can generate:
+•	Mock tests
+•	Topic-wise tests
+•	Revision questions
+•	Important concepts
+•	Quick revision notes
+________________________________________
+5. Non-Functional Requirements
+NFR1 — Performance
+•	The application should respond to user requests within a reasonable time.
+•	Frequently accessed information should load quickly.
+•	AI requests should provide clear loading/progress feedback.
+NFR2 — Usability
+The interface should be:
+•	Simple.
+•	Student-friendly.
+•	Responsive.
+•	Easy to navigate.
+•	Suitable for users with different levels of technical knowledge.
+NFR3 — Security
+The system should:
+•	Authenticate users securely.
+•	Protect user accounts.
+•	Secure uploaded study materials.
+•	Prevent unauthorized access to personal learning data.
+•	Use secure communication between the application and backend services.
+NFR4 — Scalability
+The architecture should support increasing numbers of:
+•	Students
+•	Uploaded documents
+•	AI requests
+•	Quiz attempts
+•	Stored learning records
+NFR5 — Reliability
+The application should handle:
+•	Network failures.
+•	Invalid files.
+•	Gemini API failures.
+•	Invalid user inputs.
+Appropriate error messages should be displayed rather than causing the application to crash.
+NFR6 — Maintainability
+The system should use modular components so that features such as voice interaction, additional AI models, or new quiz types can be added later.
+NFR7 — Availability
+The application should be available whenever students need to access their learning resources, subject to the availability of the underlying cloud and AI services.
+________________________________________
+6. Hardware Requirements
+For development:
+Component	Minimum Requirement
+Processor	Intel Core i3 / equivalent
+RAM	4 GB minimum, 8 GB recommended
+Storage	10 GB+ available space
+Internet	Required
+Display	1366 × 768 or higher
+Since Gemini processing can be performed through cloud APIs, a high-end GPU is not required for the application.
+________________________________________
+7. Software Requirements
+Software	Purpose
+HTML/CSS/JavaScript or React	Frontend
+Node.js / Python	Backend
+Google Gemini API	Generative AI
+Firebase / Firestore	Database
+Firebase Authentication	User authentication
+Firebase Storage	Study-material storage
+Git/GitHub	Version control
+VS Code	Development environment
+Chrome/Edge/Firefox	Testing
+________________________________________
+8. User Requirements
+Student
+The primary user should be able to:
+•	Register and log in.
+•	Ask questions.
+•	Chat with the AI tutor.
+•	Upload study materials.
+•	Generate summaries.
+•	Generate quizzes.
+•	Take quizzes.
+•	Review mistakes.
+•	Create flashcards.
+•	Track progress.
+•	Receive personalized recommendations.
+•	Prepare for examinations.
+Administrator
+If an administrator module is included, an administrator should be able to:
+•	Manage users.
+•	Monitor application usage.
+•	Manage system configuration.
+•	Monitor reported issues.
+•	View basic system statistics.
+________________________________________
+9. Use Case Analysis
+Main Actors
+•	Student
+•	Administrator
+•	Gemini AI Service
+•	Database/Cloud Storage
+Major Use Cases
+                 ┌──────────────────────┐
+                 │       EduGenie       │
+                 │                      │
+Student ────────►│ Register / Login     │
+        ────────►│ AI Tutor Chat       │
+        ────────►│ Upload Notes        │
+        ────────►│ Generate Summary    │
+        ────────►│ Ask Questions       │
+        ────────►│ Generate Quiz       │
+        ────────►│ Take Quiz           │
+        ────────►│ Generate Flashcards │
+        ────────►│ Track Progress      │
+        ────────►│ Study Planner       │
+        ────────►│ Exam Preparation    │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                    ┌───────────────┐
+                    │ Google Gemini │
+                    │      API      │
+                    └───────────────┘
+________________________________________
+10. Input Requirements
+EduGenie may receive:
+•	Student questions.
+•	Subject/topic names.
+•	Uploaded PDFs.
+•	Text notes.
+•	Images.
+•	Quiz answers.
+•	Student performance data.
+•	Examination dates.
+•	Study preferences.
+________________________________________
+11. Output Requirements
+The system should produce:
+•	AI-generated explanations.
+•	Summaries.
+•	Answers to questions.
+•	Quiz questions.
+•	Quiz scores.
+•	Answer explanations.
+•	Flashcards.
+•	Study schedules.
+•	Performance reports.
+•	Personalized recommendations.
+________________________________________
+12. Constraints
+The project may have the following constraints:
+•	Internet connectivity is required for cloud-based AI functionality.
+•	Gemini API usage may be subject to quotas and pricing.
+•	AI-generated answers may occasionally contain inaccuracies and should be presented as assistance rather than guaranteed authoritative answers.
+•	Uploaded documents may have size/type restrictions.
+•	Response time can depend on network conditions and AI-service availability.
+•	Student data and uploaded materials must be handled according to applicable privacy and security requirements.
+________________________________________
+13. Proposed System Modules
+The complete system can be divided into the following modules:
+EduGenie
+│
+├── User Management
+│   ├── Registration
+│   ├── Login
+│   └── Profile
+│
+├── AI Tutor
+│   ├── Chat
+│   ├── Explanation
+│   └── Q&A
+│
+├── Study Material
+│   ├── Upload
+│   ├── Summarization
+│   └── Ask Your Notes
+│
+├── Assessment
+│   ├── Quiz Generation
+│   ├── Quiz Evaluation
+│   └── Performance Analysis
+│
+├── Revision
+│   ├── Flashcards
+│   └── Quick Revision
+│
+├── Personalization
+│   ├── Weak Topic Detection
+│   ├── Recommendations
+│   └── Study Planner
+│
+└── Dashboard
+    ├── Progress
+    ├── Scores
+    └── Learning Statistics
+14. Minimum Viable Product (MVP)
+For the initial version, the requirements can be narrowed to:
+1.	User login/registration.
+2.	AI Tutor using Gemini.
+3.	Study-material upload.
+4.	AI summarization.
+5.	AI quiz generation.
+6.	Quiz evaluation.
+7.	Flashcard generation.
+8.	Basic progress dashboard.
+The study planner, voice interaction, advanced analytics, and multimodal learning can be implemented as future enhancements.
