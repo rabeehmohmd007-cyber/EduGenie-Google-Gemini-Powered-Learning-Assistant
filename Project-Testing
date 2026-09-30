@@ -1,1 +1,471 @@
 Project-Testing
+# EduGenie: Google Gemini Powered Learning Assistant — Project Testing
+
+ ## 1\. Testing Overview
+
+ Testing is an important phase of the **EduGenie: Google Gemini Powered Learning Assistant** project. The main objective is to verify that all modules work correctly, AI responses are handled properly, user data is protected, and the application provides a reliable learning experience.
+
+ Testing covers the **frontend, backend, database, Gemini API integration, authentication, quiz generation, summarization, and progress tracking**.
+
+ ## 2\. Testing Objectives
+
+ The main objectives are:
+
+ - Verify that all functional requirements are implemented correctly.
+- Ensure users can register and log in successfully.
+- Verify communication between the frontend and backend.
+- Verify integration with Google Gemini.
+- Check the accuracy and relevance of generated educational content.
+- Test quiz generation and scoring.
+- Test study-material summarization.
+- Verify learning-history and progress features.
+- Identify and fix application errors.
+- Test security and input validation.
+- Evaluate usability and performance.
+
+ ## 3\. Testing Strategy
+
+```
+                 EduGenie Testing
+                       │
+        ┌──────────────┼──────────────┐
+        ↓              ↓              ↓
+   Functional      Performance      Security
+     Testing         Testing         Testing
+        │              │              │
+        └──────────────┼──────────────┘
+                       ↓
+                 AI Validation
+                       │
+                       ↓
+                Usability Testing
+                       │
+                       ↓
+               Final Acceptance
+```
+
+ ## 4\. Types of Testing
+
+ ### 4.1 Unit Testing
+
+ Individual components are tested independently.
+
+ Examples:
+
+ - User validation.
+- Password validation.
+- Quiz score calculation.
+- Prompt construction.
+- Database functions.
+- API response processing.
+
+ **Objective:** Ensure individual functions operate correctly.
+
+---
+
+ ### 4.2 Integration Testing
+
+ Integration testing verifies that different modules communicate correctly.
+
+ Examples:
+
+```
+Frontend
+   ↓
+Backend API
+   ↓
+Gemini API
+```
+
+ and:
+
+```
+Frontend
+   ↓
+Backend
+   ↓
+Database
+```
+
+ **Objective:** Ensure data flows correctly between application components.
+
+---
+
+ ### 4.3 Functional Testing
+
+ Functional testing verifies that each feature performs according to its requirements.
+
+ Major functions tested:
+
+ - Registration.
+- Login/logout.
+- AI chat.
+- Concept explanation.
+- Quiz generation.
+- Quiz submission.
+- Score calculation.
+- Summarization.
+- Learning history.
+- Progress dashboard.
+
+---
+
+ ### 4.4 AI Response Testing
+
+ Because EduGenie depends on Gemini, AI-specific testing is required.
+
+ Responses should be checked for:
+
+ - Relevance to the question.
+- Educational usefulness.
+- Appropriate difficulty level.
+- Clear explanations.
+- Logical consistency.
+- Proper formatting.
+- Absence of unnecessary content.
+
+ AI output should **not be treated as guaranteed factual truth**. Important educational information should be verified against trusted course materials or references.
+
+---
+
+ ## 5\. Test Environment
+
+ | Component | Testing Environment |
+| --- | --- |
+| Frontend | Chrome / Edge / Firefox |
+| Backend | Python + Flask/FastAPI |
+| Database | MySQL/PostgreSQL/Firebase |
+| AI | Google Gemini API |
+| API Testing | Postman |
+| Code Testing | Python testing framework |
+| Operating System | Windows/Linux/macOS |
+| Network | Stable internet connection |
+
+Testing should also include different screen sizes if EduGenie is designed to be responsive.
+
+ ## 6\. Functional Test Cases
+
+ ### Authentication Testing
+
+ | Test ID | Test Case | Expected Result |
+| --- | --- | --- |
+| TC-01 | Register with valid details | Account created successfully |
+| TC-02 | Register with existing email | Appropriate error displayed |
+| TC-03 | Register with missing fields | Validation message displayed |
+| TC-04 | Login with valid credentials | User enters dashboard |
+| TC-05 | Login with incorrect password | Login rejected |
+| TC-06 | Logout | User session ends successfully |
+
+### AI Chat Testing
+
+ | Test ID | Test Case | Expected Result |
+| --- | --- | --- |
+| TC-07 | Ask a valid academic question | Relevant response generated |
+| TC-08 | Submit an empty question | Validation message displayed |
+| TC-09 | Ask a follow-up question | Context is handled appropriately |
+| TC-10 | Request simple explanation | Response uses simpler language |
+| TC-11 | Request step-by-step explanation | Structured explanation generated |
+| TC-12 | Gemini API unavailable | User-friendly error displayed |
+
+### Quiz Testing
+
+ | Test ID | Test Case | Expected Result |
+| --- | --- | --- |
+| TC-13 | Generate quiz | Quiz is generated |
+| TC-14 | Select different difficulty | Appropriate difficulty is requested |
+| TC-15 | Submit quiz | Answers are evaluated |
+| TC-16 | Select all correct answers | Maximum score calculated |
+| TC-17 | Submit incomplete quiz | Application handles unanswered questions correctly |
+| TC-18 | Save quiz result | Result stored successfully |
+
+### Summarization Testing
+
+ | Test ID | Test Case | Expected Result |
+| --- | --- | --- |
+| TC-19 | Submit valid study content | Summary generated |
+| TC-20 | Submit empty content | Validation message displayed |
+| TC-21 | Request key points | Key points generated |
+| TC-22 | Submit very large content | Application handles size appropriately |
+| TC-23 | Upload unsupported file | File rejected with appropriate message |
+
+### Progress Testing
+
+ | Test ID | Test Case | Expected Result |
+| --- | --- | --- |
+| TC-24 | Complete a quiz | Result appears in history |
+| TC-25 | Open progress dashboard | Learning statistics displayed |
+| TC-26 | Complete multiple activities | Activity history updates |
+| TC-27 | New user opens dashboard | Empty/default progress displayed correctly |
+
+## 7\. AI Quality Testing
+
+ AI responses can be evaluated using a structured test set.
+
+ ### Example
+
+ **Input:**
+
+ > Explain object-oriented programming to a beginner.
+
+ Evaluate the response based on:
+
+ | Criterion | Expected |
+| --- | --- |
+| Relevance | Directly addresses OOP |
+| Clarity | Easy for beginner to understand |
+| Structure | Logical organization |
+| Examples | Appropriate example included |
+| Accuracy | Technically correct |
+| Difficulty | Matches beginner level |
+
+A simple internal evaluation scale can be used during testing, such as:
+
+```
+0 = Unsatisfactory
+1 = Needs Improvement
+2 = Acceptable
+3 = Good
+4 = Excellent
+```
+
+ This scale should be used as a **testing aid**, not as a claim that AI quality can be completely measured by a single score.
+
+ ## 8\. Prompt Testing
+
+ Different prompts should be tested to determine whether the system consistently follows the required educational format.
+
+ ### Test Prompt 1
+
+```
+Explain photosynthesis to a school student.
+```
+
+ ### Test Prompt 2
+
+```
+Explain photosynthesis using a real-world analogy.
+```
+
+ ### Test Prompt 3
+
+```
+Explain photosynthesis step by step.
+```
+
+ ### Test Prompt 4
+
+```
+Create 10 MCQs about photosynthesis with answers.
+```
+
+ The generated results should be checked for relevance, completeness, clarity, and factual consistency.
+
+ ## 9\. Negative Testing
+
+ Negative testing verifies how the system behaves when users provide invalid or unexpected input.
+
+ Examples:
+
+ - Empty question.
+- Extremely long question.
+- Invalid email.
+- Incorrect password.
+- Unsupported file.
+- Empty quiz submission.
+- Invalid API request.
+- Network interruption.
+- Gemini API failure.
+- Database connection failure.
+
+ The application should fail gracefully without exposing internal errors or sensitive information.
+
+ ## 10\. Security Testing
+
+ Security testing should verify:
+
+ - Passwords are not stored as plain text.
+- API credentials are protected.
+- Unauthorized users cannot access another user's data.
+- User input is validated.
+- Database queries are protected against injection attacks.
+- Uploaded files are validated.
+- Authentication sessions are handled securely.
+- Sensitive error information is not displayed.
+
+ ### Example
+
+ A logged-in user should only be able to access:
+
+```
+Their own
+    ↓
+Chat History
+Quiz Results
+Progress
+Profile
+```
+
+ They should not be able to access another student's records by changing an ID in a request.
+
+ ## 11\. Performance Testing
+
+ Performance testing determines whether EduGenie responds within acceptable time under normal usage.
+
+ Test areas include:
+
+ - Login response time.
+- Chat response time.
+- Quiz generation time.
+- Summary generation time.
+- Database query performance.
+- Dashboard loading time.
+
+ AI response time can vary because it depends on external API availability, network conditions, and model processing.
+
+ ## 12\. Usability Testing
+
+ A small group of representative students can test the application.
+
+ They should evaluate:
+
+ - Ease of registration.
+- Ease of navigation.
+- Chat interface.
+- Readability of AI responses.
+- Quiz interface.
+- Dashboard clarity.
+- Mobile responsiveness.
+- Error-message clarity.
+
+ Sample feedback questions:
+
+ 1. Was the interface easy to understand?
+2. Was it easy to ask questions?
+3. Were AI responses understandable?
+4. Was quiz navigation clear?
+5. Could you easily find your previous activities?
+6. What feature should be improved?
+
+ ## 13\. Compatibility Testing
+
+ EduGenie should be tested on commonly used environments.
+
+ ### Browsers
+
+ - Google Chrome
+- Microsoft Edge
+- Mozilla Firefox
+- Safari, where applicable
+
+ ### Devices
+
+ - Desktop
+- Laptop
+- Tablet
+- Smartphone
+
+ The interface should remain usable across different screen sizes.
+
+ ## 14\. Regression Testing
+
+ Whenever a bug is fixed or a new feature is added, previously working features should be tested again.
+
+ For example:
+
+```
+Add Quiz Feature
+       ↓
+Test Quiz
+       ↓
+Fix Quiz Bug
+       ↓
+Regression Testing
+       ↓
+Test Login
+Test Chat
+Test Summary
+Test Progress
+```
+
+ This helps ensure that new changes do not break existing functionality.
+
+ ## 15\. User Acceptance Testing
+
+ The final version can be provided to selected users for real-world evaluation.
+
+ ### Acceptance Criteria
+
+ The system should allow users to:
+
+ - Successfully register and log in.
+- Ask educational questions.
+- Receive Gemini-generated responses.
+- Generate quizzes.
+- Submit quizzes and view results.
+- Generate summaries.
+- View learning history.
+- View learning-progress information.
+- Use the application without critical errors.
+
+ ## 16\. Defect Management
+
+ Identified problems can be recorded using a defect table.
+
+ | Bug ID | Description | Severity | Status |
+| --- | --- | --- | --- |
+| BUG-01 | Login fails with valid credentials | High | Fixed |
+| BUG-02 | Quiz score not displayed | Medium | Fixed |
+| BUG-03 | Summary button unresponsive | High | In Progress |
+| BUG-04 | Dashboard layout issue on mobile | Low | Fixed |
+
+### Severity Levels
+
+ - **Critical:** Application cannot operate.
+- **High:** Major functionality is unavailable.
+- **Medium:** Function works incorrectly but has a workaround.
+- **Low:** Minor UI or usability issue.
+
+ ## 17\. Final Testing Workflow
+
+```
+Unit Testing
+     ↓
+Integration Testing
+     ↓
+Functional Testing
+     ↓
+AI Response Testing
+     ↓
+Security Testing
+     ↓
+Performance Testing
+     ↓
+Usability Testing
+     ↓
+Regression Testing
+     ↓
+User Acceptance Testing
+     ↓
+Final Release
+```
+
+ ## 18\. Expected Testing Results
+
+ After successful testing:
+
+ - Authentication should operate correctly.
+- AI chat should communicate successfully with Gemini.
+- Educational responses should be relevant and appropriately formatted.
+- Quiz generation and scoring should work correctly.
+- Summarization should process valid content correctly.
+- User learning history should be stored and retrieved correctly.
+- Progress information should update after learning activities.
+- Invalid inputs should be handled safely.
+- Sensitive credentials and user information should be protected.
+- The application should work across supported browsers and devices.
+
+ ## 19\. Testing Conclusion
+
+ Testing ensures that **EduGenie** is functional, reliable, secure, and usable before deployment. Particular attention should be given to **Gemini integration and AI-output validation**, because generated responses may occasionally be incomplete or incorrect.
+
+ The final testing process confirms that the major EduGenie modules—**AI Chat, Concept Explanation, Quiz Generation, Summarization, Authentication, Learning History, and Progress Tracking**—work together as an integrated learning platform.
