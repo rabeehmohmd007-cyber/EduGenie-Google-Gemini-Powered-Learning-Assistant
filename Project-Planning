@@ -1,2 +1,265 @@
-Project-Planning
-Project Planning Phase Timeline: Week 1: Requirement gathering and design Week 2: Core development (Explain, Summarize, Quiz features) Week 3: Testing and bug fixes Week 4: Documentation and demo video Tools Used: Google AI Studio (development) GitHub (version control and submission) Google Gemini API (AI model) Approach: The project was planned in phases, starting with idea finalization, followed by requirement analysis, UI design, development using Google AI Studio, testing, and finally documentation and demo recording.
+## EduGenie: Google Gemini Powered Learning Assistant — Project Planning
+
+ ### 1\. Project Planning Overview
+
+ **EduGenie** is planned as an AI-powered learning platform that uses **Google Gemini** to provide personalized educational assistance. The project will be developed in stages, starting with requirements and design and progressing through implementation, testing, deployment, and documentation.
+
+ ### 2\. Project Goals
+
+ - Build an easy-to-use AI learning assistant.
+- Integrate Google Gemini for intelligent responses.
+- Provide personalized explanations for academic topics.
+- Generate summaries, quizzes, and revision materials.
+- Maintain student learning history and progress.
+- Develop a secure and scalable application.
+- Evaluate the system for usability and response quality.
+
+ ### 3\. Project Scope
+
+ #### In Scope
+
+ - Student registration and login.
+- AI-powered educational chatbot.
+- Subject/topic-based questions.
+- Concept explanations.
+- Study-material summarization.
+- AI-generated quizzes.
+- Quiz evaluation and scoring.
+- Learning history.
+- Student progress dashboard.
+- Gemini API integration.
+
+ #### Out of Scope for Initial Version
+
+ - Live classes.
+- Direct teacher-student video communication.
+- Fully automated grading of university examinations.
+- Official academic certification.
+- Replacement of teachers or institutional learning systems.
+
+ ### 4\. Development Methodology
+
+ The project can follow an **Agile development approach**.
+
+ Development will be divided into small iterations. Each iteration will produce a functional part of EduGenie, allowing testing and improvements before moving to the next stage.
+
+```
+Requirement Analysis
+        ↓
+System Design
+        ↓
+UI/UX Design
+        ↓
+Database & Backend Setup
+        ↓
+Gemini API Integration
+        ↓
+Feature Development
+        ↓
+Testing
+        ↓
+Deployment
+        ↓
+Documentation & Presentation
+```
+
+ ### 5\. Project Phases
+
+ | Phase | Major Activities | Output |
+| --- | --- | --- |
+| **Phase 1** | Requirement analysis | Requirement specification |
+| **Phase 2** | System and database design | Architecture + ER design |
+| **Phase 3** | UI/UX design | Interface prototypes |
+| **Phase 4** | Backend development | APIs and server |
+| **Phase 5** | Gemini integration | AI functionality |
+| **Phase 6** | Feature development | Chat, quiz, summary modules |
+| **Phase 7** | Testing | Tested application |
+| **Phase 8** | Deployment | Working application |
+| **Phase 9** | Documentation | Final report and presentation |
+
+### 6\. Proposed 12-Week Schedule
+
+ | Week | Activities |
+| --- | --- |
+| **Week 1** | Project selection, problem identification, objectives |
+| **Week 2** | Requirement gathering and technology research |
+| **Week 3** | System architecture and database design |
+| **Week 4** | UI/UX design and project setup |
+| **Week 5** | User authentication and profile module |
+| **Week 6** | Backend APIs and database implementation |
+| **Week 7** | Google Gemini API integration |
+| **Week 8** | AI chatbot and concept explanation |
+| **Week 9** | Summary and quiz-generation modules |
+| **Week 10** | Progress dashboard and learning history |
+| **Week 11** | Integration, testing, debugging, and security checks |
+| **Week 12** | Deployment, documentation, presentation, and final demonstration |
+
+### 7\. Work Breakdown Structure
+
+```
+EduGenie
+│
+├── 1. Project Initiation
+│   ├── Problem identification
+│   ├── Objectives
+│   └── Scope definition
+│
+├── 2. Requirement Analysis
+│   ├── Functional requirements
+│   ├── Non-functional requirements
+│   └── User requirements
+│
+├── 3. System Design
+│   ├── Architecture
+│   ├── Database
+│   ├── API design
+│   └── UI/UX
+│
+├── 4. Development
+│   ├── Frontend
+│   ├── Backend
+│   ├── Authentication
+│   ├── Gemini integration
+│   ├── Chat
+│   ├── Quiz
+│   └── Summarization
+│
+├── 5. Testing
+│   ├── Unit testing
+│   ├── Integration testing
+│   ├── Functional testing
+│   └── User acceptance testing
+│
+├── 6. Deployment
+│   ├── Server configuration
+│   ├── Database deployment
+│   └── Application deployment
+│
+└── 7. Documentation
+    ├── Project report
+    ├── User guide
+    └── Final presentation
+```
+
+ ### 8\. Team Planning
+
+ For a **4-member student team**, responsibilities can be divided as follows:
+
+ | Team Member | Responsibility |
+| --- | --- |
+| **Member 1** | Project coordination, requirements, documentation |
+| **Member 2** | Frontend and UI/UX development |
+| **Member 3** | Backend, database, authentication |
+| **Member 4** | Gemini integration, AI features, testing |
+
+All members should participate in integration, testing, documentation, and final presentation.
+
+ ### 9\. Required Resources
+
+ #### Hardware
+
+ - Laptop/desktop computer
+- Internet connection
+- Minimum 4–8 GB RAM recommended for development
+
+ #### Software
+
+ - Visual Studio Code
+- Git/GitHub
+- Python
+- Flask or FastAPI
+- HTML/CSS/JavaScript or React
+- MySQL/PostgreSQL/Firebase
+- API testing tool such as Postman
+
+ #### AI Service
+
+ - Google Gemini API
+- API credentials/configuration
+- Appropriate model and usage limits for the project
+
+ ### 10\. Risk Management
+
+ | Risk | Impact | Mitigation |
+| --- | --- | --- |
+| Gemini API unavailable | High | Implement error handling and fallback messages |
+| API usage limits | Medium | Monitor usage and optimize requests |
+| Incorrect AI responses | High | Add validation, clear prompts, and user guidance |
+| Data loss | High | Regular database backups |
+| Security vulnerabilities | High | Secure authentication and protect API credentials |
+| Development delays | Medium | Use weekly milestones |
+| Integration problems | Medium | Test each module before integration |
+| Poor user experience | Medium | Conduct usability testing with sample users |
+
+### 11\. Testing Plan
+
+ Testing will be performed at multiple levels.
+
+ **Unit Testing**
+
+ - Authentication functions
+- Quiz generation
+- Score calculation
+- Database operations
+
+ **Integration Testing**
+
+ - Frontend ↔ backend
+- Backend ↔ database
+- Backend ↔ Gemini API
+
+ **Functional Testing**
+
+ - Login
+- Chat
+- Summarization
+- Quiz generation
+- Progress tracking
+
+ **Usability Testing**
+
+ - Navigation
+- Readability
+- Response presentation
+- Ease of asking questions
+
+ ### 12\. Project Milestones
+
+```
+M1 → Requirements Completed
+        ↓
+M2 → System Design Completed
+        ↓
+M3 → UI + Database Completed
+        ↓
+M4 → Backend Completed
+        ↓
+M5 → Gemini Integration Completed
+        ↓
+M6 → Core Features Completed
+        ↓
+M7 → Testing Completed
+        ↓
+M8 → Final Deployment
+        ↓
+M9 → Project Presentation
+```
+
+ ### 13\. Success Criteria
+
+ The project will be considered successfully completed when:
+
+ - Users can register and securely access the application.
+- Students can ask educational questions through the AI assistant.
+- Gemini can generate relevant educational responses.
+- Students can generate summaries and quizzes.
+- Quiz answers can be evaluated automatically.
+- Learning activities can be stored and displayed.
+- The major modules work together without critical errors.
+- The application meets the defined functional requirements.
+
+ ### 14\. Final Project Outcome
+
+ At the end of the project, **EduGenie** will be delivered as a functional AI-powered learning assistant capable of combining **conversational learning, personalized explanations, automated study-material generation, quizzes, and progress tracking** in one platform.
+
+ The project plan is structured so that the **core MVP can be completed first**, while advanced features such as voice interaction, multilingual support, image-based questions, and advanced analytics can be added later.
