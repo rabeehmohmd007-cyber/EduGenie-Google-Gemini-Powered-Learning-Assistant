@@ -1,1 +1,559 @@
 Project-Documentation
+# EduGenie: Google Gemini Powered Learning Assistant — Project Documentation
+
+ ## 1\. Project Title
+
+ **EduGenie: Google Gemini Powered Learning Assistant**
+
+ ## 2\. Abstract
+
+ EduGenie is an AI-powered learning assistant designed to support students in their academic learning through interactive and personalized assistance. The system integrates Google Gemini to provide natural-language responses to educational questions and generate useful learning resources.
+
+ The application provides features such as AI-based question answering, concept explanation, study-material summarization, quiz generation, quiz evaluation, learning-history management, and progress tracking. The system is designed to provide students with an accessible learning companion that can be used whenever assistance is required.
+
+ ## 3. Introduction
+
+ Students often need additional explanations, practice questions, summaries, and revision materials outside traditional classroom environments. Searching for appropriate resources can be time-consuming, while generic resources may not match an individual student's learning level.
+
+ EduGenie addresses this problem by providing an AI-based educational assistant. Students can interact with the system using natural language and request explanations, examples, summaries, quizzes, and other learning resources.
+
+ Google Gemini acts as the primary AI engine, while the EduGenie application manages user interaction, learning history, quizzes, and progress information.
+
+ ## 4\. Problem Statement
+
+ Traditional learning systems may have limitations such as:
+
+ - Limited personalized assistance.
+- Difficulty obtaining immediate answers to questions.
+- Time-consuming searching for study resources.
+- Limited opportunities for automatically generated practice questions.
+- Difficulty organizing personal learning activities.
+- Different students requiring different explanation levels.
+
+ Therefore, an intelligent learning assistant is proposed to provide personalized and interactive educational support.
+
+ ## 5\. Objectives
+
+ The major objectives of EduGenie are:
+
+ 1. To develop an AI-powered learning assistant.
+2. To integrate Google Gemini into an educational application.
+3. To provide interactive question-answering.
+4. To explain academic concepts at different difficulty levels.
+5. To generate quizzes automatically.
+6. To summarize study materials.
+7. To maintain student learning history.
+8. To provide basic learning-progress information.
+9. To create a simple and user-friendly learning interface.
+10. To implement appropriate security and data-protection practices.
+
+ ## 6\. Scope of the Project
+
+ ### Included
+
+ - User registration and authentication.
+- AI-powered educational chat.
+- Concept explanation.
+- Quiz generation.
+- Quiz evaluation.
+- Study-material summarization.
+- Learning history.
+- Progress dashboard.
+- Gemini API integration.
+
+ ### Future Scope
+
+ - Voice-based learning.
+- Multilingual educational assistance.
+- Image-based question analysis.
+- AI-generated flashcards.
+- Advanced learning analytics.
+- Teacher and administrator dashboards.
+- Personalized revision schedules.
+- Educational document analysis.
+
+ ## 7\. System Requirements
+
+ ### Hardware Requirements
+
+ - Computer/laptop.
+- Minimum 4 GB RAM; 8 GB or more recommended.
+- Stable internet connection.
+- Sufficient storage for development tools and project files.
+
+ ### Software Requirements
+
+ - Windows/Linux/macOS.
+- Visual Studio Code or equivalent IDE.
+- Python.
+- Flask/FastAPI.
+- HTML, CSS, JavaScript or React.
+- MySQL/PostgreSQL/Firebase.
+- Git/GitHub.
+- Postman.
+- Google Gemini API access.
+
+ ## 8\. Technology Stack
+
+ | Layer | Technology |
+| --- | --- |
+| Frontend | HTML, CSS, JavaScript / React |
+| Backend | Python, Flask / FastAPI |
+| Database | MySQL / PostgreSQL / Firebase |
+| AI Engine | Google Gemini |
+| API | REST API |
+| Version Control | Git/GitHub |
+| Testing | Pytest / Postman / Browser testing |
+| IDE | Visual Studio Code |
+
+## 9\. System Architecture
+
+```
+                    ┌──────────────────┐
+                    │     Student      │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                    ┌──────────────────┐
+                    │  EduGenie UI     │
+                    │ Web Application   │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                    ┌──────────────────┐
+                    │  Backend Server  │
+                    │ Flask / FastAPI  │
+                    └──────┬───────┬───┘
+                           │       │
+                 ┌─────────▼─┐   ┌─▼────────────┐
+                 │ Database  │   │ Gemini API   │
+                 │           │   │              │
+                 │ Users     │   │ Chat         │
+                 │ History   │   │ Quiz         │
+                 │ Progress  │   │ Summary      │
+                 └───────────┘   └──────────────┘
+```
+
+ ## 10\. Functional Requirements
+
+ ### FR-01: User Registration
+
+ The system shall allow new students to create an account.
+
+ ### FR-02: User Login
+
+ The system shall authenticate registered users.
+
+ ### FR-03: AI Chat
+
+ The system shall allow students to submit educational questions and receive AI-generated responses.
+
+ ### FR-04: Concept Explanation
+
+ The system shall provide explanations based on the requested subject and difficulty level.
+
+ ### FR-05: Quiz Generation
+
+ The system shall generate questions based on a selected topic.
+
+ ### FR-06: Quiz Evaluation
+
+ The system shall evaluate submitted answers and calculate a score.
+
+ ### FR-07: Summarization
+
+ The system shall generate concise summaries from valid study content.
+
+ ### FR-08: Learning History
+
+ The system shall store relevant learning activities for later reference.
+
+ ### FR-09: Progress Tracking
+
+ The system shall display basic learning activity and quiz-performance information.
+
+ ### FR-10: Error Handling
+
+ The system shall display appropriate messages when requests fail or invalid input is provided.
+
+ ## 11\. Non-Functional Requirements
+
+ ### Performance
+
+ The application should respond efficiently under normal usage conditions.
+
+ ### Usability
+
+ The interface should be simple enough for students to navigate without extensive instructions.
+
+ ### Security
+
+ User credentials and API credentials must be protected.
+
+ ### Reliability
+
+ The system should handle API, network, and database failures gracefully.
+
+ ### Scalability
+
+ The architecture should allow additional subjects, users, and features to be added later.
+
+ ### Maintainability
+
+ The application should use modular frontend, backend, and service components.
+
+ ## 12\. Module Description
+
+ ### 12.1 Authentication Module
+
+ Handles:
+
+ - Registration.
+- Login.
+- Logout.
+- User profile.
+- Authentication/session management.
+
+ ### 12.2 AI Chat Module
+
+ Provides:
+
+ - Academic question answering.
+- Follow-up questions.
+- Simple explanations.
+- Examples.
+- Step-by-step explanations.
+
+ ### 12.3 Quiz Module
+
+ Provides:
+
+ - Topic selection.
+- Difficulty selection.
+- Question generation.
+- Answer submission.
+- Automatic scoring.
+- Result storage.
+
+ ### 12.4 Summarization Module
+
+ Allows students to obtain:
+
+ - Short summaries.
+- Important points.
+- Definitions.
+- Revision notes.
+- Question-and-answer material.
+
+ ### 12.5 Learning History Module
+
+ Maintains information an interactive learning platform. By combining a web-based interface, backend services, database management, and about previous:
+
+ - Questions.
+- Quizzes.
+- Summaries.
+- Learning activities.
+
+ ### 12.6 Progress Module
+
+ Displays:
+
+ - Quiz attempts.
+- Scores.
+- Topics studied.
+- Subject-wise activity.
+- Recent learning activity.
+
+ ## 13\. Database Design
+
+ ### Users Table
+
+```
+user_id
+name
+email
+password_hash
+education_level
+created_at
+```
+
+ ### Chat History Table
+
+```
+chat_id
+user_id
+question
+response
+created_at
+```
+
+ ### Quiz Table
+
+```
+quiz_id
+user_id
+topic
+difficulty
+questions
+score
+created_at
+```
+
+ ### Progress Table
+
+```
+progress_id
+user_id
+subject
+topics_completed
+quiz_attempts
+average_score
+```
+
+ ## 14\. Data Flow
+
+```
+Student
+   │
+   ▼
+Enter Question
+   │
+   ▼
+Frontend
+   │
+   ▼
+Backend API
+   │
+   ▼
+Prompt Preparation
+   │
+   ▼
+Google Gemini
+   │
+   ▼
+Generated Response
+   │
+   ▼
+Backend
+   │
+   ├──────► Database
+   │
+   ▼
+Frontend
+   │
+   ▼
+Student
+```
+
+ ## 15\. Gemini Integration
+
+ Gemini is used as the AI-processing component of EduGenie.
+
+ A contextual prompt can contain information such as:
+
+```
+Role: Educational Assistant
+Subject: Computer Science
+Student Level: Beginner
+Topic: Data Structures
+Task: Explain binary search
+Response Style: Simple and step-by-step
+```
+
+ The backend sends the request to Gemini and processes the returned response before displaying it to the student.
+
+ The Gemini API credential should be stored securely on the server side and should not be exposed in frontend source code.
+
+ ## 16\. User Interface
+
+ ### Login Page
+
+```
+┌─────────────────────────────┐
+│          EduGenie           │
+│                             │
+│ Email:    [____________]    │
+│ Password: [____________]    │
+│                             │
+│        [ Login ]            │
+│                             │
+│     Create an Account       │
+└─────────────────────────────┘
+```
+
+ ### Dashboard
+
+```
+┌─────────────────────────────────┐
+│           EduGenie              │
+├─────────────────────────────────┤
+│ Welcome, Student                │
+│                                 │
+│ [ AI Chat ] [ Generate Quiz ]   │
+│                                 │
+│ [ Summarize ] [ My Progress ]   │
+│                                 │
+│ Recent Activities               │
+└─────────────────────────────────┘
+```
+
+ ### AI Chat
+
+```
+┌─────────────────────────────────┐
+│          AI Learning Chat       │
+├─────────────────────────────────┤
+│ Student: Explain recursion      │
+│                                 │
+│ EduGenie: Recursion is a...     │
+│                                 │
+├─────────────────────────────────┤
+│ [ Ask your question... ] [Send] │
+└─────────────────────────────────┘
+```
+
+ ## 17\. Development Process
+
+ The project follows these stages:
+
+```
+Requirement Analysis
+        ↓
+System Design
+        ↓
+UI/UX Design
+        ↓
+Database Development
+        ↓
+Backend Development
+        ↓
+Gemini Integration
+        ↓
+Feature Development
+        ↓
+Testing
+        ↓
+Deployment
+        ↓
+Documentation
+```
+
+ ## 18\. Testing Documentation
+
+ Testing is conducted at multiple levels:
+
+ - Unit testing.
+- Integration testing.
+- Functional testing.
+- AI response testing.
+- Security testing.
+- Performance testing.
+- Usability testing.
+- Compatibility testing.
+- Regression testing.
+- User acceptance testing.
+
+ Important AI-specific checks include relevance, clarity, consistency, appropriate difficulty, and factual reliability.
+
+ ## 19\. Sample Test Case
+
+ | Test ID | TC-01 |
+| --- | --- |
+| Test Name | AI Question Answering |
+| Input | "Explain inheritance in Java." |
+| Precondition | User is logged in |
+| Action | Enter question and click Send |
+| Expected Result | Relevant educational explanation is displayed |
+| Actual Result | To be recorded during execution |
+| Status | Pass/Fail |
+
+## 20\. Security Considerations
+
+ EduGenie should:
+
+ - Hash passwords.
+- Protect API credentials.
+- Validate user input.
+- Restrict access to authenticated resources.
+- Protect user-specific learning records.
+- Validate uploaded files.
+- Use secure communication in production.
+- Avoid exposing internal server errors.
+- Avoid storing unnecessary personal information.
+
+ ## 21\. Limitations
+
+ The project has some limitations:
+
+ - AI-generated responses may occasionally contain inaccurate information.
+- Gemini availability depends on external API services.
+- API usage may be subject to quotas and costs.
+- Internet connectivity is required for AI features.
+- AI responses may vary for similar prompts.
+- Progress indicators represent application activity and should not be interpreted as comprehensive measures of academic achievement.
+
+ ## 22\. Future Enhancements
+
+ Future versions can include:
+
+ ### Voice Assistant
+
+ Students could ask questions using speech and receive spoken responses.
+
+ ### Multilingual Support
+
+ The assistant could support multiple regional and international languages.
+
+ ### Image-Based Learning
+
+ Students could upload diagrams, mathematical problems, or educational images for analysis where supported.
+
+ ### AI Flashcards
+
+ EduGenie could automatically generate revision flashcards from study material.
+
+ ### Personalized Study Plans
+
+ The application could generate revision schedules based on topics and planned study sessions.
+
+ ### Teacher Dashboard
+
+ Teachers could monitor aggregate learning activity and create educational content.
+
+ ### Gamification
+
+ Badges, achievements, streaks, and challenges could be introduced to make revision more interactive.
+
+ ## 23\. Project Timeline
+
+ | Phase | Duration |
+| --- | --- |
+| Requirement Analysis | 1 Week |
+| System Design | 1 Week |
+| UI/UX Design | 1 Week |
+| Database & Backend | 2 Weeks |
+| Gemini Integration | 1 Week |
+| Feature Development | 2 Weeks |
+| Testing | 2 Weeks |
+| Deployment | 1 Week |
+| Documentation & Presentation | 1 Week |
+
+**Total: 12 Weeks**
+
+ ## 24\. Expected Outcome
+
+ The completed EduGenie system will provide students with a centralized AI-assisted learning environment where they can:
+
+ - Ask academic questions.
+- Understand difficult concepts.
+- Generate quizzes.
+- Practice questions.
+- Summarize study materials.
+- Review previous learning activities.
+- Monitor basic learning progress.
+
+ ## 25\. Conclusion
+
+ **EduGenie: Google Gemini Powered Learning Assistant** demonstrates the application of generative AI in education through an interactive learning platform. By combining a web-based interface, backend services, database management, and Google Gemini, the system provides students with on-demand educational assistance.
+
+ The project emphasizes **personalized learning, interactive content generation, and convenient access to educational support**, while recognizing that AI-generated information should be reviewed and verified when accuracy is important.
